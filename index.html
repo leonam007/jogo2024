@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="content">
-        <h1>Descubra o número de 0 a 100</h1>
-        <input type="number" id="bet" placeholder="Digite um número">
-        <button onclick="verifyNumber()">Enviar</button>
+    <div class="container">
+        <div class="content">
+            <h1>Descubra o número de 0 a 100</h1>
+            <button onclick="refresh()" class="btn sortear">Sortear Número</button>
+            <input type="text" id="bet" placeholder="Digite um número" onkeyup="handleKeyPress(event)" class="input-text">
+            <button onclick="verifyNumber()" id="submit-button" class="btn tentar">Tentar</button>
+            <textarea id="log" rows="10" cols="30" placeholder="Log dos palpites" readonly></textarea>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
